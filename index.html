@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Document</title>
+  <title>Document</title>
+  <style>
+    #a{
+        width: 300px;
+        height: 80px;
+        border-radius: 10px;
+        font-size: 80%;
+        color:white;
+        box-shadow: 2px 2px 5px black;
+    }
+  </style>
 </head>
 <body>
+    <input id="a" type="button" value="SUBSCRIBE" onclick ="sub()">
     <script>
-        var brand=["BMW","AUDI","BENZ","TATA","MARUTHI","FORD","TATA"]
-        document.write(brand.indexOf("TATA"))
-        document.write(brand.lastIndexOf("TATA"))
+        function sub()
+        {
+            var a=document.getElementById("a").value
+            if(a=="SUBSCRIBE")
+            {
+                document.getElementById("a").style.backgroundColor="gray"
+                document.getElementById("a").setAttribute("value","SUBSCRIBED")
+            }
+            else
+            {
+                document.getElementById("a").style.backgroundColor="red"
+                document.getElementById("a").setAttribute("value","SUBSCRIBE")
+            }
+        }
     </script>
 </body>
 </html>
